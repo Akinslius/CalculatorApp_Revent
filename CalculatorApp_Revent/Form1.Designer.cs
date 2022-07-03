@@ -42,13 +42,13 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.backSpace = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.plusMinus_btn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Equal_btn = new System.Windows.Forms.Button();
             this.label_screen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -218,16 +218,16 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button22
+            // backSpace
             // 
-            this.button22.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(93, 131);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(84, 50);
-            this.button22.TabIndex = 1;
-            this.button22.Text = "←";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.backSpace.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backSpace.Location = new System.Drawing.Point(93, 131);
+            this.backSpace.Name = "backSpace";
+            this.backSpace.Size = new System.Drawing.Size(84, 50);
+            this.backSpace.TabIndex = 1;
+            this.backSpace.Text = "←";
+            this.backSpace.UseVisualStyleBackColor = true;
+            this.backSpace.Click += new System.EventHandler(this.backSpace_Click);
             // 
             // button23
             // 
@@ -238,7 +238,7 @@
             this.button23.TabIndex = 1;
             this.button23.Text = "√";
             this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.button23.Click += new System.EventHandler(this.squareRoot_Click);
             // 
             // button24
             // 
@@ -251,15 +251,16 @@
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.operator_Click);
             // 
-            // button4
+            // plusMinus_btn
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 376);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 50);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "± ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.plusMinus_btn.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusMinus_btn.Location = new System.Drawing.Point(3, 376);
+            this.plusMinus_btn.Name = "plusMinus_btn";
+            this.plusMinus_btn.Size = new System.Drawing.Size(84, 50);
+            this.plusMinus_btn.TabIndex = 1;
+            this.plusMinus_btn.Text = "± ";
+            this.plusMinus_btn.UseVisualStyleBackColor = true;
+            this.plusMinus_btn.Click += new System.EventHandler(this.plusMinus_Click);
             // 
             // button6
             // 
@@ -284,16 +285,16 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.btn_Click);
             // 
-            // button8
+            // Equal_btn
             // 
-            this.button8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(273, 376);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(84, 50);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "=";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.btnEqual_Click);
+            this.Equal_btn.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equal_btn.Location = new System.Drawing.Point(273, 376);
+            this.Equal_btn.Name = "Equal_btn";
+            this.Equal_btn.Size = new System.Drawing.Size(84, 50);
+            this.Equal_btn.TabIndex = 1;
+            this.Equal_btn.Text = "=";
+            this.Equal_btn.UseVisualStyleBackColor = true;
+            this.Equal_btn.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // label_screen
             // 
@@ -313,7 +314,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(360, 448);
             this.Controls.Add(this.label_screen);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.Equal_btn);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button12);
@@ -327,8 +328,8 @@
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.backSpace);
+            this.Controls.Add(this.plusMinus_btn);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button9);
@@ -358,13 +359,13 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button backSpace;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button plusMinus_btn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Equal_btn;
         private System.Windows.Forms.Label label_screen;
     }
 }
